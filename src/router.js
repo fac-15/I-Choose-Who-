@@ -1,5 +1,3 @@
-// Require the module you have created, i.e. handlers.js, at the top of your router.js
-
 const handlers = require("./handlers.js");
 
 const router = (request, response) => {
