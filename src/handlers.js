@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const pokeObj = require("../data/pokedex.json");
+console.log(pokeObj.pokemon[0]);
 
 const handleHomeRoute = (request, response) => {
   const url = request.url;
@@ -27,7 +29,6 @@ const handlePublic = (request, response, url) => {
     jpg: "image/jpeg",
     png: "image/png",
     json: "application/json"
-
   };
 
   const filePath = path.join(__dirname, "..", url);
