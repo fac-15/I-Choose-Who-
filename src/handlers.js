@@ -15,6 +15,22 @@ const handleHomeRoute = (request, response) => {
   });
 };
 
+const handlePublic = (request, response, url) => {
+  const extension = url.split('.')[1];
+  const extensionType = {
+    html: 'text/html',
+    css: 'text/css',
+    js: 'application/javascript',
+    //ico: 'image/x-icon',
+    jpg: 'image/jpeg',
+    png: 'image/png'
+  };
+
+
+}
+
+
+
 module.exports = {
   handleHomeRoute
 };
