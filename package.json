@@ -4,7 +4,8 @@
   "description": "Alex, Charlie, Sak and Jason's project.",
   "main": "index.js",
   "scripts": {
-    "test": "tape src/test.js | tap-spec"
+    "test": "tape src/test.js | tap-spec",
+    "dev": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "devDependencies": {
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
+  },
+  "dependencies": {
+    "nodemon": "^1.18.6"
   }
 }
