@@ -1,0 +1,24 @@
+{
+  "name": "I-Choose-Who-",
+  "version": "1.0.0",
+  "description": "Alex, Charlie, Sak and Jason's project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape src/test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-15/I-Choose-Who-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-15/I-Choose-Who-/issues"
+  },
+  "homepage": "https://github.com/fac-15/I-Choose-Who-#readme",
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  }
+}
