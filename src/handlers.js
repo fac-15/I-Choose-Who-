@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 
 const handleHomeRoute = (request, response) => {
+  const url = request.url;
+  console.log(url);
   const filePath = path.join(__dirname, "..", "public", "index.html");
   fs.readFile(filePath, (error, file) => {
     if (error) {
@@ -23,11 +25,14 @@ const handlePublic = (request, response, url) => {
     js: "application/javascript",
     //ico: 'image/x-icon',
     jpg: "image/jpeg",
-    png: "image/png"
+    png: "image/png",
+    json: "application/json"
+
   };
 
   const filePath = path.join(__dirname, "..", url);
   console.log(filePath);
+
   fs.readFile(filePath, (error, file) => {
     if (error) {
       console.log(error);
