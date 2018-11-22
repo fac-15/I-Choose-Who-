@@ -7,13 +7,8 @@
   margin-right: 33%;
 }
 
-@font-face {
-  font-family: "pokemon font";
-  src: url("public/Pokemon GB.ttf") format("truetype");
-}
-
 input[type="text"] {
-  font-family: "pokemon font", Verdana, Tahoma;
+  font-family: monospace;
   font-size: 2.3em;
   color: peru;
 }
