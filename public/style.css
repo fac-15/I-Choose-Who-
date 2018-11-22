@@ -1,0 +1,62 @@
+#ajax {
+  width: 30vw;
+  height: 8vh;
+  border-radius: 10px;
+  margin-top: 30%;
+  margin-left: 33%;
+  margin-right: 33%;
+}
+
+@font-face {
+  font-family: "pokemon font";
+  src: url("public/Pokemon GB.ttf") format("truetype");
+}
+
+input[type="text"] {
+  font-family: "pokemon font", Verdana, Tahoma;
+  font-size: 2.3em;
+  color: peru;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  /* grid-gap: 10px; */
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  /* font-size: 150%; */
+  height: 100vh;
+  width: 100vw;
+}
+
+.a {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.b {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-image: url("images/pokedex_pic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#pokedexContainer {
+  background-image: url("images/pokedex_pic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

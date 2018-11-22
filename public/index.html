@@ -2,18 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/reset.css">
+    <link rel="stylesheet" href="/public/style.css">
     <title></title>
   </head>
   <body>
-    <h1>This is index.html!!!!!</h1>
 
-    <ul id="pokeList">
-
-    </ul>
-
-    <input type="text" id="ajax" list="json-datalist" placeholder="e.g. Bulbasaur" />
-    <datalist id="json-datalist"></datalist>
+    <div class="wrapper">
+      <div id="pokedexContainer" class="box a">
+        <input type="text" id="ajax" list="json-datalist" placeholder="e.g. Bulbasaur"/>
+        <datalist id="json-datalist"></datalist>
+      </div>
+      <div class="box b">B</div>
+    </div>
 
 
       <script type="text/javascript" src="/public/js/request.js"></script>

@@ -9,6 +9,7 @@ xhr.onreadystatechange = function() {
     for (i in data.pokemon) {
       var option = document.createElement("option");
       var txt = data.pokemon[i].name;
+      option.className = i;
       option.value = txt;
       console.log("txt", txt);
       // Add the <option> element to the <datalist>.
