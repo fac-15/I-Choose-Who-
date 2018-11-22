@@ -27,8 +27,7 @@ const handlePublic = (request, response, url) => {
     js: "application/javascript",
     //ico: 'image/x-icon',
     jpg: "image/jpeg",
-    png: "image/png",
-    json: "application/json"
+    png: "image/png"
   };
 
   const filePath = path.join(__dirname, "..", url);
@@ -47,7 +46,26 @@ const handlePublic = (request, response, url) => {
   console.log(url);
 };
 
+const handleJSON = (request, response) => {
+  const url = request.url;
+  console.log(url);
+  const filePath = path.join(__dirname, "..", "data", "pokedex.json");
+  fs.readFile(filePath, (error, file) => {
+    if (error) {
+      console.log(error);
+      console.log("HANDLED JSON REQ BUT ERROR");
+      response.writeHead(500, "Content-Type: text/html");
+      response.end("<h1>Sorry, we've had a problem on our end</h1>");
+    } else {
+      console.log("handled JSON req");
+      response.writeHead(200, "Content-Type: application/json");
+      response.end(JSON.stringify(pokeObj));
+    }
+  });
+};
+
 module.exports = {
   handleHomeRoute,
-  handlePublic
+  handlePublic,
+  handleJSON
 };

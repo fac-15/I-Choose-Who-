@@ -6,6 +6,8 @@ const router = (request, response) => {
     handlers.handleHomeRoute(request, response);
   } else if (url.indexOf("public") !== -1) {
     handlers.handlePublic(request, response, url);
+  } else if (url.indexOf("data") !== -1) {
+    handlers.handleJSON(request, response, url);
   } else {
     response.writeHead(404, "Content-Type: text/html");
     response.end("<h1>404 file not found</h1>");
