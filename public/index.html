@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+
     <meta charset="utf-8">
     <link rel="stylesheet" href="/public/reset.css">
     <link rel="stylesheet" href="/public/style.css">
@@ -10,18 +11,24 @@
 
 
     <div class="wrapper">
+
       <div id="pokedexContainer" class="box a">
+
+        <h1>I choose who, pick your champion</h1>
         <label for="ajax">Search here:</label>
-        <input type="text" id="ajax" list="json-datalist" placeholder="e.g Bulbasaur"/>
+        <input type="text" id="ajax" list="json-datalist" placeholder="e.g. Bulbasaur"/>
         <datalist id="json-datalist"></datalist>
         <select id ='select'>
         </select>
+      <div id="output">
+          <h1 id="title"></h1>
+          <img id="img" alt="image of selected pokemon" src="">
+
+</div>
       </div>
-      <div class="box b">
-        <h1 id="title"></h1>
-        <img id="img" src="" alt="image of selected pokemon">
-      </div>
-    </div>
+
+
+
 
 
     <script type="text/javascript" src="/public/js/request.js"></script>
