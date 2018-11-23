@@ -9,19 +9,16 @@ Alex, Charlie, Sak and Jason's project.
 ### Goals 🥅
 
 Create a pokedex app that can: 
-1. display a list to search a list of pokemon
-2. provide pokemon information to the user
+1. Display a dropdown list of pokemon to the user
+2. Provide information about the specific pokemon that the user selects 
 3. To get more comfortable with node.js 
 
 
 ### Dependencies to install 💻
 ![](https://media.giphy.com/media/TFhobYtkih62k/giphy.gif)
 
-- JavaScript
-- HTML
-- CSS
-- Tape for testing
-- Heroku
+- Tape and tap-spec for testing
+- nodemon
 
 ### Use locally:
 
@@ -189,7 +186,8 @@ function eventHandler(result) {
 ### Stretch Goals 🏃🥅
 ![stretch](https://media.giphy.com/media/SwMMo3AMDwqru/giphy.gif)
 
-- better css
-- more info about the pokemon
-- desktop friendly
+- Better css
+- More info about the selected pokemon
+- Desktop friendly
+- Refactoring: our handlers.js file had different functions that all shared a fair amount of similar code.
 
