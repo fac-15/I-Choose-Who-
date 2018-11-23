@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>pokedex app</title>
+
     <meta charset="utf-8">
     <link rel="stylesheet" href="/public/reset.css">
     <link rel="stylesheet" href="/public/style.css">
-    <title></title>
+    <title>I Choose Who? Pokedex Project</title>
   </head>
   <body>
 
@@ -13,18 +13,22 @@
     <div class="wrapper">
 
       <div id="pokedexContainer" class="box a">
+
         <h1>I choose who, pick your champion</h1>
+        <label for="ajax">Search here:</label>
         <input type="text" id="ajax" list="json-datalist" placeholder="e.g. Bulbasaur"/>
         <datalist id="json-datalist"></datalist>
+        <select id ='select'>
+        </select>
       <div id="output">
           <h1 id="title"></h1>
-          <img id="img" src="">
+          <img id="img" alt="image of selected pokemon" src="">
 
 </div>
       </div>
 
 
-    </div>
+
 
 
     <script type="text/javascript" src="/public/js/request.js"></script>

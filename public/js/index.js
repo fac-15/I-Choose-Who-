@@ -1,5 +1,6 @@
 var dataList = document.getElementById("json-datalist");
 var input = document.getElementById("ajax");
+var select = document.getElementById("select");
 
 fetchData(function(result) {
   createOption(result);
@@ -11,7 +12,7 @@ function createOption(result) {
     var txt = result.pokemon[i].name;
     option.className = i;
     option.value = txt;
-    dataList.appendChild(option);
+    select.appendChild(option);
   }
 }
 

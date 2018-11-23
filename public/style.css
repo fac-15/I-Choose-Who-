@@ -12,11 +12,21 @@ h1 {
   font-size: 50px;
   color: white;
 }
+::placeholder {
+  color: black;
+  opacity: 1;
+}
 
 input[type="text"] {
   font-family: monospace;
   font-size: 2.3em;
-  color: peru;
+  color: black;
+}
+
+select {
+  width: 12em;
+  margin: 0;
+  margin-left: -12.75em;
 }
 
 .wrapper {
