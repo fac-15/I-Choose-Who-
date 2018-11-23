@@ -23,7 +23,6 @@ function eventHandler(result) {
     "change",
     function(e) {
       var newValue = e.target.value;
-      console.log("check", newValue);
       createList(result, newValue);
     },
     false
@@ -37,7 +36,6 @@ function createList(result, x) {
       var title = document.getElementById("title");
       title.textContent = outputName;
       var outputImg = result.pokemon[i].img;
-      console.log(outputImg);
       var image = document.getElementById("img");
       image.src = outputImg;
     }

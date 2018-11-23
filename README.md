@@ -29,6 +29,16 @@ Create a pokedex app that can:
 
 - Testing
 
+- Accessibility
+-- We definitely let our accessibility fall by the wayside. We deployed with a whopping Lighthouse score of 22. Problems included: no labels attached to our input field; no alt attributes on img elements; no title in the head.
+
+-- Placeholder text is automatically greyed out... which is a good design convention. However, this came through as an accessibility issue - poor colour contrast between grey text and white input field. 
+
+-- We managed to resolve all this and get our audit score up to 100.
+
+### Refactoring
+
+
 
 ### **Tests** 
 
