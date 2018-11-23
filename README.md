@@ -30,6 +30,30 @@ Create a pokedex app that can:
 - set up your local server: npm run dev
 - type localhost:4000 in your browser
 
+### **Processes** 
+
+File structure
+
+![screen shot 2018-11-23 at 12 35 30](https://user-images.githubusercontent.com/25176118/48943813-58a2ff00-ef1c-11e8-9075-55a402e0fc2a.png)
+
+
+Server side 
+
+server.js
+
+const http = require("http");
+const router = require("./router");
+const port = process.env.PORT || 4000;
+
+const server = http.createServer(router);
+
+server.listen(port);
+
+console.log(`server up and running on localhost:${port}`);
+
+
+
+
 ### Problems 😥 
 ![travolta](https://media.giphy.com/media/yuI7fL5cR1YeA/giphy.gif)
 
