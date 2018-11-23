@@ -34,7 +34,7 @@ File structure
 ![screen shot 2018-11-23 at 12 35 30](https://user-images.githubusercontent.com/25176118/48943813-58a2ff00-ef1c-11e8-9075-55a402e0fc2a.png)
 
 
-Server side 
+**Server side** 
 
 server
 
@@ -75,7 +75,6 @@ router
 
 handler 
 
-router
 ```javascript
 const handleJSON = (request, response) => {
   const url = request.url;
@@ -102,7 +101,8 @@ module.exports = {
 };
 
 ```
-Client side
+
+**Client side**
 
 request.js
 
