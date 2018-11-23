@@ -23,11 +23,12 @@ Create a pokedex app that can:
 - Tape for testing
 - Heroku
 
-###Use locally:
--git clone this repo
--npm install
--set up your local server: npm run dev
--type localhost:4000 in your browser
+### Use locally:
+
+- git clone this repo
+- npm install
+- set up your local server: npm run dev
+- type localhost:4000 in your browser
 
 ### Problems 😥 
 ![travolta](https://media.giphy.com/media/yuI7fL5cR1YeA/giphy.gif)
