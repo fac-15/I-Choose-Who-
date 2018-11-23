@@ -107,24 +107,18 @@ Client side
 request.js
 
 ```javascript
-const http = require("http");
-const handlers = require("./handlers.js");
+var xhr = new XMLHttpRequest();
 
-const router = (request, response) => {
-  const url = request.url;
-  if (url === "/") {
-    handlers.handleHomeRoute(request, response);
-  } else if (url.indexOf("public") !== -1) {
-    handlers.handlePublic(request, response, url);
-  } else if (url.indexOf("data") !== -1) {
-    handlers.handleJSON(request, response, url);
-  } else {
-    response.writeHead(404, "Content-Type: text/html");
-    response.end("<h1>404 file not found</h1>");
-  }
-};
-
-module.exports = router;
+function fetchData(cb) {
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // console.log(xhr.responseText);
+      cb(JSON.parse(xhr.responseText));
+    }
+  };
+  xhr.open("GET", "/data", true);
+  xhr.send();
+}
 
 ```
 
