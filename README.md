@@ -1,7 +1,7 @@
-# I-Choose-Who-
+# I Choose Who?
 Alex, Charlie, Sak and Jason's project.
 
-# Pokedex 
+# Pokedex app
 ![](https://media.giphy.com/media/U2nN0ridM4lXy/giphy.gif)
 
 [Link to our project](https://i-choose-who.herokuapp.com/)
