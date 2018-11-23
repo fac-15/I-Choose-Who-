@@ -13,6 +13,12 @@ input[type="text"] {
   color: peru;
 }
 
+select {
+  width: 12em;
+  margin: 0;
+  margin-left: -12.75em;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 100%;
