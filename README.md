@@ -180,6 +180,11 @@ function eventHandler(result) {
 
 - Serving up our .json file: Making an API c
 
+**Safari autocomplete issue**
+
+<img width="744" alt="screen shot 2018-11-23 at 12 55 43" src="https://user-images.githubusercontent.com/32898403/48944728-d87e9880-ef1f-11e8-8821-10d09f871ec2.png">
+
+
 ### **Tests** 
 
 - We had problems testing, we managed to test nothing!
