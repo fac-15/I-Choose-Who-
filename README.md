@@ -173,6 +173,8 @@ function eventHandler(result) {
 
 - We managed to resolve all issues and get our audit score up to **100**. 🎉🎉🎉
 
+![screenshot from 2018-11-23 13-01-28](https://user-images.githubusercontent.com/32115309/48944781-05cb4680-ef20-11e8-84d5-6e8e7b0a34da.png)
+
 **node.js**
 - File structure: we ran into a lot of problems with organising our file structure, and then knowing how to write our paths in order to locate the files we wanted!
 
