@@ -166,8 +166,6 @@ function eventHandler(result) {
 ### Problems 😥 
 ![travolta](https://media.giphy.com/media/yuI7fL5cR1YeA/giphy.gif)
 
-Testing
-
 **Accessibility**
 - We definitely let our accessibility fall by the wayside. We deployed with a whopping Lighthouse score of **22**. Problems included: **no labels** attached to our input field; **no alt** attributes on img elements; **no title** in the head.
 
@@ -175,9 +173,10 @@ Testing
 
 - We managed to resolve all issues and get our audit score up to **100**. 🎉🎉🎉
 
-### Refactoring
+**node.js**
+- File structure: we ran into a lot of problems with organising our file structure, and then knowing how to write our paths in order to locate the files we wanted!
 
-
+- Serving up our .json file: Making an API c
 
 ### **Tests** 
 
