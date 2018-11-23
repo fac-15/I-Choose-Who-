@@ -1,7 +1,7 @@
-# I-Choose-Who-
+# I Choose Who?
 Alex, Charlie, Sak and Jason's project.
 
-# Pokedex 
+# Pokedex app
 ![](https://media.giphy.com/media/U2nN0ridM4lXy/giphy.gif)
 
 [Link to our project](https://i-choose-who.herokuapp.com/)
@@ -9,19 +9,16 @@ Alex, Charlie, Sak and Jason's project.
 ### Goals 🥅
 
 Create a pokedex app that can: 
-1. display a list to search a list of pokemon
-2. provide pokemon information to the user
+1. Display a dropdown list of pokemon to the user
+2. Provide information about the specific pokemon that the user selects 
 3. To get more comfortable with node.js 
 
 
 ### Dependencies to install 💻
 ![](https://media.giphy.com/media/TFhobYtkih62k/giphy.gif)
 
-- JavaScript
-- HTML
-- CSS
-- Tape for testing
-- Heroku
+- Tape and tap-spec for testing
+- nodemon
 
 ### Use locally:
 
@@ -37,7 +34,7 @@ File structure
 ![screen shot 2018-11-23 at 12 35 30](https://user-images.githubusercontent.com/25176118/48943813-58a2ff00-ef1c-11e8-9075-55a402e0fc2a.png)
 
 
-Server side 
+**Server side** 
 
 server
 
@@ -78,7 +75,6 @@ router
 
 handler 
 
-router
 ```javascript
 const handleJSON = (request, response) => {
   const url = request.url;
@@ -105,29 +101,24 @@ module.exports = {
 };
 
 ```
-Client side
+
+**Client side**
 
 request.js
 
 ```javascript
-const http = require("http");
-const handlers = require("./handlers.js");
+var xhr = new XMLHttpRequest();
 
-const router = (request, response) => {
-  const url = request.url;
-  if (url === "/") {
-    handlers.handleHomeRoute(request, response);
-  } else if (url.indexOf("public") !== -1) {
-    handlers.handlePublic(request, response, url);
-  } else if (url.indexOf("data") !== -1) {
-    handlers.handleJSON(request, response, url);
-  } else {
-    response.writeHead(404, "Content-Type: text/html");
-    response.end("<h1>404 file not found</h1>");
-  }
-};
-
-module.exports = router;
+function fetchData(cb) {
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // console.log(xhr.responseText);
+      cb(JSON.parse(xhr.responseText));
+    }
+  };
+  xhr.open("GET", "/data", true);
+  xhr.send();
+}
 
 ```
 
@@ -169,17 +160,23 @@ function eventHandler(result) {
 ### Problems 😥 
 ![travolta](https://media.giphy.com/media/yuI7fL5cR1YeA/giphy.gif)
 
-- Testing
+**Accessibility**
+- We definitely let our accessibility fall by the wayside. We deployed with a whopping Lighthouse score of **22**. Problems included: **no labels** attached to our input field; **no alt** attributes on img elements; **no title** in the head.
 
-- Accessibility
--- We definitely let our accessibility fall by the wayside. We deployed with a whopping Lighthouse score of 22. Problems included: no labels attached to our input field; no alt attributes on img elements; no title in the head.
+- An interesting accessibility issue is placeholder text being automatically greyed out. On one hand, this is a good design convention. However, this results in poor colour contrast between grey text and white input field. 
 
--- Placeholder text is automatically greyed out... which is a good design convention. However, this came through as an accessibility issue - poor colour contrast between grey text and white input field. 
+- We managed to resolve all issues and get our audit score up to **100**. 🎉🎉🎉
 
--- We managed to resolve all this and get our audit score up to 100.
+![screenshot from 2018-11-23 13-01-28](https://user-images.githubusercontent.com/32115309/48944781-05cb4680-ef20-11e8-84d5-6e8e7b0a34da.png)
 
-### Refactoring
+**node.js**
+- File structure: we ran into a lot of problems with organising our file structure, and then knowing how to write our paths in order to locate the files we wanted!
 
+- Serving up our .json file: Making an API c
+
+**Safari autocomplete issue**
+
+<img width="744" alt="screen shot 2018-11-23 at 12 55 43" src="https://user-images.githubusercontent.com/32898403/48944728-d87e9880-ef1f-11e8-8821-10d09f871ec2.png">
 
 
 ### **Tests** 
@@ -189,7 +186,8 @@ function eventHandler(result) {
 ### Stretch Goals 🏃🥅
 ![stretch](https://media.giphy.com/media/SwMMo3AMDwqru/giphy.gif)
 
-- better css
-- more info about the pokemon
-- desktop friendly
+- Better css
+- More info about the selected pokemon
+- Desktop friendly
+- Refactoring: our handlers.js file had different functions that all shared a fair amount of similar code.
 
